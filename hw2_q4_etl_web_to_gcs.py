@@ -30,7 +30,7 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
 def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
     """Write DataFrame out locally as parquet file"""
     topath = Path(f"data/{color}/{dataset_file}.parquet")
-    frompath = Path(f"C:\zoomcamp\week2\flows\02_gcp\data\{color}\{dataset_file}.parquet")
+    frompath = Path(f"C:\zoomcamp\week2\\flows\\02_gcp\data\{color}\{dataset_file}.parquet")
     df.to_parquet(frompath, compression="gzip")
     return frompath, topath
 
